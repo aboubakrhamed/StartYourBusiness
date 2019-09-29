@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title data-react-helmet="true">Shipment tracking</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="w3-bar w3-black" style="padding-top:5px;">
+			<img src="big bang - bar.png" height="50px" style="float:left; padding-left:5px; padding-right:25px; padding-bottom:5px;">
+			<a href="big bang.html" class="w3-bar-item w3-button w3-mobile">Home</a>
+			<a href="import.html" class="w3-bar-item w3-button w3-mobile">Import</a>
+			<a href="track.html" class="w3-bar-item w3-button w3-mobile">Track your shipment</a>
+		</div>
+		<h1 style="font-family:Times New Roman; padding-left:10px; text-align:center;">You can track your shipment here</h1>
+		<div id="googleMap"></div>
+		<script>
+			function myMap() {
+			var mapProp= {
+				center:new google.maps.LatLng(51.508742,-0.120850),
+				zoom:5,
+			};
+			var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+			}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+	</body>
+</html>
